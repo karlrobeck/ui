@@ -1,0 +1,14 @@
+{
+  "tailwind": {
+    "css": "src/css/tailwind.css",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "utils": "src/js/utils",
+    "components": "src/js/components",
+    "ui": "src/ui",
+    "lib": "src/lib",
+    "hooks": "src/hook"
+  }
+}
