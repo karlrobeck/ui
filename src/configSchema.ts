@@ -16,15 +16,13 @@ export const configSchema = z
     aliases: z
       .object({
         utils: z.string().default('src/js/utils'),
-        components: z.string().default('src/js/components'),
-        ui: z.string().optional().default('src/ui'),
+        components: z.string().default('src/components'),
         lib: z.string().optional().default('src/lib'),
         hooks: z.string().optional().default('src/hook'),
       })
       .default({
         utils: 'src/js/utils',
-        components: 'src/js/components',
-        ui: 'src/ui',
+        components: 'src/components',
         lib: 'src/lib',
         hooks: 'src/hook',
       }),
@@ -37,8 +35,7 @@ export const configSchema = z
     },
     aliases: {
       utils: 'src/js/utils',
-      components: 'src/js/components',
-      ui: 'src/ui',
+      components: 'src/components',
       lib: 'src/lib',
       hooks: 'src/hook',
     },

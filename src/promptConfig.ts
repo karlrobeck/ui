@@ -34,12 +34,6 @@ export async function promptConfig() {
     },
     {
       type: 'input',
-      name: 'aliases.ui',
-      message: 'Path for alias "ui" (optional):',
-      default: 'src/ui',
-    },
-    {
-      type: 'input',
       name: 'aliases.lib',
       message: 'Path for alias "lib" (optional):',
       default: 'src/lib',

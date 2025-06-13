@@ -61,7 +61,30 @@ program.command('add').action(function () {
 program.command('scaffold <name>').action(function (name: string) {
   const opts = this.parent ? this.parent.opts() : program.opts();
   const config = loadConfig(opts.config);
-  // ...existing code for scaffold...
+
+  // Output directory: components alias + name (e.g., src/components/button)
+  const componentDir = path.join(config.aliases.components, name);
+  const jsFile = path.join(componentDir, 'index.js');
+  const cssFile = path.join(componentDir, 'style.css');
+
+  // Ensure component directory exists
+  fs.mkdirSync(componentDir, { recursive: true });
+
+  // Create CSS file with a basic comment
+  if (!fs.existsSync(cssFile)) {
+    fs.writeFileSync(cssFile, `/* Styles for ${name} */\n`);
+    console.log(`Created ${cssFile}`);
+  } else {
+    console.log(`${cssFile} already exists.`);
+  }
+
+  // Create JS file with a basic template
+  if (!fs.existsSync(jsFile)) {
+    fs.writeFileSync(jsFile, `// JS for ${name}\n`);
+    console.log(`Created ${jsFile}`);
+  } else {
+    console.log(`${jsFile} already exists.`);
+  }
 });
 
 program.parse(process.argv);
