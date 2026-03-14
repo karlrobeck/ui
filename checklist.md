@@ -2,11 +2,11 @@
 # Phase 1: simple
 
 - [] aspect-ratio
-- [] breadcrumb
+- [x] breadcrumb
 - [] direction
 - [] empty
-- [] input
-- [] item
+- [x] input
+- [x] item
 - [] pagination
 - [] table
 - [x] alert

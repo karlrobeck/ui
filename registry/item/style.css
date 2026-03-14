@@ -1,0 +1,105 @@
+@reference "tailwindcss";
+
+@layer components {
+  .item-group {
+    @apply gap-4 flex w-full flex-col;
+
+    &[data-size="sm"] {
+      @apply gap-2.5 gap-2;
+    }
+  }
+
+  .item-separator {
+    @apply my-2;
+  }
+
+  .item {
+    @apply [a]:hover:bg-muted rounded-lg border text-sm flex w-full flex-wrap items-center transition-colors duration-100 outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 [a]:transition-colors;
+
+    /* Default variant */
+    @apply border-transparent gap-2.5 px-3 py-2.5;
+
+    /* Variants */
+
+    &.item-outline {
+      @apply border-border;
+    }
+
+    &.item-muted {
+      @apply bg-muted/50 border-transparent;
+    }
+
+    /* Sizes */
+
+    &.item-sm {
+      @apply gap-2.5 px-3 py-2.5;
+    }
+
+    &.item-xs {
+      @apply gap-2 px-2.5 py-2;
+
+      &[data-slot="dropdown-menu-content"] {
+        @apply p-0;
+      }
+    }
+  }
+
+  .item-media {
+    @apply gap-2 flex shrink-0 items-center justify-center [&_svg]:pointer-events-none;
+
+    .item-description & {
+      @apply translate-y-0.5 self-start;
+    }
+
+    /* Default */
+    @apply bg-transparent;
+
+    &.item-media-icon {
+      @apply [&_svg:not([class*='size-'])]:size-4;
+    }
+
+    &.item-media-image {
+      @apply size-10 overflow-hidden rounded-sm [&_img]:size-full [&_img]:object-cover;
+    }
+
+    .item[data-size="sm"] & {
+      @apply size-8;
+    }
+
+    .item[data-size="xs"] & {
+      @apply size-6;
+    }
+  }
+
+  .item-content {
+    @apply gap-1 group-data-[size=xs]/item:gap-0 flex flex-1 flex-col [&+[data-slot=item-content]]:flex-none;
+
+    .item[data-size="sm"] & {
+      @apply gap-0;
+    }
+  }
+
+  .item-title {
+    @apply gap-2 text-sm leading-snug font-medium underline-offset-4 line-clamp-1 flex w-fit items-center;
+  }
+
+  .item-description {
+    @apply text-muted-foreground text-left text-sm leading-normal line-clamp-2 font-normal [&>a]:underline [&>a]:underline-offset-4 [&>a:hover]:text-primary;
+
+    .item[data-size="sm"] & {
+      @apply text-sm;
+    }
+  }
+
+  .item-action {
+    @apply gap-2 flex items-center;
+  }
+
+  .item-header {
+    @apply gap-2 flex basis-full items-center justify-between;
+  }
+
+  .item-footer {
+    @apply gap-2 flex basis-full items-center justify-between;
+  }
+}
