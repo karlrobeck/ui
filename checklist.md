@@ -8,13 +8,13 @@
 - [x] input
 - [x] item
 - [] pagination
-- [] table
+- [x] table
 - [x] alert
 - [x] avatar
-- [] button
+- [x] button
 - [x] card
-- [] checkbox
-- [] field
+- [] checkbox (input-checkbox)
+- [x] field
 - [] input-group
 - [] kbd
 - [] native-select
