@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+@layer components {
+  .breadcrumb-list {
+    @apply text-muted-foreground gap-1.5 text-sm flex flex-wrap items-center wrap-break-word;
+  }
+
+  .breadcrumb-item {
+    @apply gap-1 inline-flex items-center;
+  }
+
+  .breadcrumb-link {
+    @apply hover:text-foreground transition-colors;
+  }
+
+  .breadcrumb-page {
+    @apply text-foreground font-normal;
+  }
+
+  .breadcrumb-separator {
+    @apply [&>svg]:size-3.5;
+  }
+
+  .breadcrumb-ellipsis {
+    @apply size-5 [&>svg]:size-4 flex items-center justify-center;
+  }
+}

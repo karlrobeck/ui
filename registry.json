@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "ui",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "alert",
+      "description": "alert component",
+      "type": "registry:style",
+      "files": [
+        {
+          "path": "registry/alert/style.css",
+          "type": "registry:style"
+        }
+      ]
+    }
+  ]
+}
