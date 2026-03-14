@@ -15,7 +15,7 @@
 - [x] card
 - [] checkbox (input-checkbox)
 - [x] field
-- [] input-group
+- [x] input-group
 - [x] kbd
 - [] native-select
 - [x] separator
@@ -25,7 +25,7 @@
 - [] badge
 - [] button-group
 - [x] label
-- [] progress
+- [] progress (not supported yet?) just use raw css
 - [] scroll-area (not supported) just use raw css
 - [x] textarea
 
