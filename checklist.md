@@ -1,9 +1,9 @@
 
 # Phase 1: simple
 
-- [] aspect-ratio
+- [] aspect-ratio (not supported) just use raw css
 - [x] breadcrumb
-- [] direction
+- [] direction (not supported)
 - [x] empty
 - [x] input
 - [x] item
@@ -16,18 +16,18 @@
 - [] checkbox (input-checkbox)
 - [x] field
 - [] input-group
-- [] kbd
+- [x] kbd
 - [] native-select
-- [] separator
-- [] skeleton
-- [] spinner
+- [x] separator
+- [x] skeleton
+- [] spinner (not supported) just use (animate-spin)
 - [] typography
 - [] badge
 - [] button-group
-- [] label
+- [x] label
 - [] progress
-- [] scroll-area
-- [] textarea
+- [] scroll-area (not supported) just use raw css
+- [x] textarea
 
 # Phase 2: with data-state
 

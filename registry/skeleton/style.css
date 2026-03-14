@@ -1,0 +1,7 @@
+@reference "tailwindcss";
+
+@layer components {
+  .skeleton {
+    @apply bg-muted rounded-md animate-pulse;
+  }
+}

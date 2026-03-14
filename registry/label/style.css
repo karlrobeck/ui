@@ -1,0 +1,11 @@
+@reference "tailwindcss";
+
+@layer components {
+  .label {
+    @apply gap-2 text-sm leading-none font-medium peer-disabled:opacity-50 flex items-center select-none peer-disabled:cursor-not-allowed;
+
+    *[data-disabled="true"] & {
+      @apply opacity-50 pointer-events-none;
+    }
+  }
+}
